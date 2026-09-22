@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 118804875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839c33417ef8a0a409c67eb50645a67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  jumpSpeed: 10
+  jumpSpeed: 1609
 --- !u!50 &318549202
 Rigidbody2D:
   serializedVersion: 5
@@ -557,8 +557,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.37274337
+  m_UseAutoMass: 0
+  m_Mass: 70
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 9.8

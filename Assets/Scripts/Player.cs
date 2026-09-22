@@ -38,7 +38,10 @@ public class Player : MonoBehaviour
 		if (context.started)
 			playerAnim.SetBool("isJumping", true);
 		if (context.performed && !isJumping)
+		{
+			rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 			rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+		}
 		if (context.canceled)
 			playerAnim.SetBool("isJumping", false);
 	}

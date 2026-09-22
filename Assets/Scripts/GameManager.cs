@@ -75,9 +75,12 @@ public class GameManager : MonoBehaviour
 	public void Die()
 	{
 		Time.timeScale = 0f;
+		if (score > PlayerPrefs.GetFloat("highScore", 0))
+			PlayerPrefs.SetFloat("highScore", score);
 		isGameRunning = false;
 		playButton.SetActive(true);
 		quitButton.SetActive(true);
+		PlayerPrefs.Save();
 	}
 	public void ResetScore()
 	{
