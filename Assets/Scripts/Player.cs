@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 	// Variables
 	Rigidbody2D rb;
 	Animator playerAnim;
+	AudioManager audioManager;
 	private bool isJumping = false;
 	[SerializeField] float jumpSpeed = 10f;
 
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
 	// Pre-built Functions
 	void Awake()
 	{
+		audioManager = AudioManager.instance;
 		rb = GetComponent<Rigidbody2D>();
 		playerAnim = GetComponentInChildren<Animator>();
 	}
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
 		{
 			rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 			rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+			audioManager.PlayAudio("Jump");
 		}
 		if (context.canceled)
 			playerAnim.SetBool("isJumping", false);

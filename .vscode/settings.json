@@ -67,5 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Rock-Runner-2D.slnx"
+    "dotnet.defaultSolution": "Rock-Runner-2D.slnx",
+    "dotnet.enableWorkspaceBasedDevelopment": false
 }

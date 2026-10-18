@@ -205,7 +205,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 3028052226768755329}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -234,6 +234,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee326e4fd1039e84599dc90a439f1e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  deathJump: 10
   minSpeed: 10
   maxSpeed: 15

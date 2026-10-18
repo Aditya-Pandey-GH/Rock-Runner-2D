@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -15,7 +14,7 @@ public class Enemy : MonoBehaviour
 	// Pre-built Functions
 	void Awake()
 	{
-		gameManager = GameManager.Instance;
+		gameManager = GameManager.instance;
 		actualSpeed = Random.Range(minSpeed, maxSpeed);
 	}
 	void FixedUpdate()
@@ -35,7 +34,9 @@ public class Enemy : MonoBehaviour
 			// player.GetComponent<CapsuleCollider2D>().enabled = false;
 		}
 		else if (collision.gameObject.CompareTag("Enemy"))
+		{
 			Destroy(gameObject);
+		}
 	}
 
 
