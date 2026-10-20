@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Ground"))
 			isJumping = false;
-		// else if (collision.gameObject.CompareTag("Boundary"))
-		// 	Debug.Log("LOL LMAO");
 	}
 	void OnCollisionExit2D(Collision2D collision)
 	{
