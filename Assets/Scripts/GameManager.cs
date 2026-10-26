@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField] CoinSpawner coinSpawn;
 	[SerializeField] Player player;
 	[SerializeField] TextMeshProUGUI scoreText;
-	[SerializeField] TextMeshProUGUI gameAndName;
 	[SerializeField] GameObject playButton;
 	[SerializeField] GameObject quitButton;
+	[SerializeField] GameObject popupButton;
 	[SerializeField] int frameRate = -1;
 	[SerializeField] float edgePhaseX = 1.5f;
 	[SerializeField] float yAxisPos4Spawn = -2.45f;
@@ -62,9 +62,13 @@ public class GameManager : MonoBehaviour
 		Time.timeScale = 0f;
 		score = scoreText.text == "" ? 0 : float.Parse(scoreText.text);
 	}
+	public void ClosePopup()
+	{
+		Destroy(popupButton);
+		// popupButton.SetActive(false);
+	}
 	public void GameStart()
 	{
-		gameAndName.enabled = false;
 		Vector2 left = FindLeftEdgeOfCamera(edgePhaseX);
 		TeleportPlayer(left);
 		ResetGame();
