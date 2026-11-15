@@ -37,22 +37,25 @@ public class Player : MonoBehaviour
 	{
 		if (context.started)
 			playerAnim.SetBool("isJumping", true);
-		if (context.performed && !isJumping)
+		if (context.performed)
 		{
-			rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-			rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-			audioManager.PlayAudio("Jump");
+			if (!isJumping)
+			{
+				rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+				rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+				audioManager.PlayAudio("Jump");
+			}
 		}
 		if (context.canceled)
 			playerAnim.SetBool("isJumping", false);
 	}
-	public void Crouch(InputAction.CallbackContext context)
-	{
-		if (context.performed)
-			playerAnim.SetBool("isCrouching", true);
-		if (context.canceled)
-			playerAnim.SetBool("isCrouching", false);
-	}
+	// public void Crouch(InputAction.CallbackContext context)
+	// {
+	// 	if (context.performed)
+	// 		playerAnim.SetBool("isCrouching", true);
+	// 	if (context.canceled)
+	// 		playerAnim.SetBool("isCrouching", false);
+	// }
 
 
 

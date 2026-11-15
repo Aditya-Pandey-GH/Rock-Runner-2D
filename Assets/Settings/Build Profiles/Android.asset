@@ -78,7 +78,7 @@ MonoBehaviour:
     - line: '|   m_StereoRenderingPath: 0'
     - line: '|   m_ActiveColorSpace: 1'
     - line: '|   unsupportedMSAAFallback: 0'
-    - line: '|   m_SpriteBatchMaxVertexCount: 65535'
+    - line: '|   m_SpriteBatchMaxVertexCount: 38776'
     - line: '|   m_SpriteBatchVertexThreshold: 300'
     - line: '|   m_MTRendering: 1'
     - line: '|   mipStripping: 0'
@@ -116,7 +116,7 @@ MonoBehaviour:
     - line: '|   defaultIsNativeResolution: 1'
     - line: '|   macRetinaSupport: 1'
     - line: '|   runInBackground: 0'
-    - line: '|   muteOtherAudioSources: 0'
+    - line: '|   muteOtherAudioSources: 1'
     - line: '|   Prepare IOS For Recording: 0'
     - line: '|   Force IOS Speakers When Recording: 0'
     - line: '|   audioSpatialExperience: 0'
@@ -131,8 +131,8 @@ MonoBehaviour:
     - line: '|   resizableWindow: 0'
     - line: '|   useMacAppStoreValidation: 0'
     - line: '|   macAppStoreCategory: public.app-category.games'
-    - line: '|   gpuSkinning: 0'
-    - line: '|   meshDeformation: 0'
+    - line: '|   gpuSkinning: 1'
+    - line: '|   meshDeformation: 1'
     - line: '|   xboxPIXTextureCapture: 0'
     - line: '|   xboxEnableAvatar: 0'
     - line: '|   xboxEnableKinect: 0'
@@ -176,7 +176,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.9.0'
+    - line: '|   bundleVersion: 0.9.3m'
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: 11400000, guid: 29cdd922144e9d9429b0ddd12537479f, type:
         2}'
@@ -336,7 +336,7 @@ MonoBehaviour:
     - line: '|   - m_BuildTarget: '
     - line: '|     m_Icons:'
     - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {fileID: 2800000, guid: e6cdec975a8050343a9c0faa57588750,
+    - line: '|       m_Icon: {fileID: 2800000, guid: 87dda0868aabd4547a3115168ecc06a7,
         type: 3}'
     - line: '|       m_Width: 128'
     - line: '|       m_Height: 128'
@@ -407,13 +407,16 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: bacd855c4a2e9994e8ca14415dee91b8,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: e6cdec975a8050343a9c0faa57588750,
+    - line: '|       - {fileID: 2800000, guid: e1be5c19b00125b44bb742db8fc38a27,
         type: 3}'
     - line: '|       m_Width: 432'
     - line: '|       m_Height: 432'
     - line: '|       m_Kind: 2'
     - line: '|       m_SubKind: '
-    - line: '|     - m_Textures: []'
+    - line: '|     - m_Textures:'
+    - line: '|       - {instanceID: 0}'
+    - line: '|       - {fileID: 2800000, guid: e1be5c19b00125b44bb742db8fc38a27,
+        type: 3}'
     - line: '|       m_Width: 324'
     - line: '|       m_Height: 324'
     - line: '|       m_Kind: 2'
@@ -741,7 +744,8 @@ MonoBehaviour:
     - line: '|   scriptingBackend:'
     - line: '|     Android: 1'
     - line: '|   il2cppCompilerConfiguration: {}'
-    - line: '|   il2cppCodeGeneration: {}'
+    - line: '|   il2cppCodeGeneration:'
+    - line: '|     Android: 1'
     - line: '|   il2cppStacktraceInformation: {}'
     - line: '|   managedStrippingLevel: {}'
     - line: '|   incrementalIl2cppBuild: {}'
@@ -868,17 +872,17 @@ MonoBehaviour:
         m_ExplicitNullChecks: 0
         m_ExplicitDivideByZeroChecks: 0
         m_ExplicitArrayBoundsChecks: 0
-        m_CompressionType: 3
+        m_CompressionType: 2
         m_InstallInBuildFolder: 0
         m_InsightsSettingsContainer:
           m_BuildProfileEngineDiagnosticsState: 2
         m_AdaptivePerformanceEnabled: 0
-        m_BuildSubtarget: 6
+        m_BuildSubtarget: 0
         m_BuildSystem: 1
         m_ExportAsGoogleAndroidProject: 0
         m_DebugSymbolLevel: 1
         m_DebugSymbolFormat: 5
-        m_CurrentDeploymentTargetId: ZN5227D9SW
+        m_CurrentDeploymentTargetId: __builtin__target_default
         m_BuildType: 2
         m_LinkTimeOptimization: 0
         m_BuildAppBundle: 0

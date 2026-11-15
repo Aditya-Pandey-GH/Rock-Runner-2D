@@ -30,7 +30,6 @@ public class CoinMovement : MonoBehaviour
 			gameManager.ScoreIncrease(25f);
 			Destroy(gameObject);
 		}
-
 	}
 
 

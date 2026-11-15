@@ -30,7 +30,7 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
@@ -70,7 +70,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "2776c80d-3c14-4091-8c56-d04ced07a2b0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
@@ -90,6 +90,16 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "TouchJump",
+                    "type": "Button",
+                    "id": "58be73a9-8a66-4610-9e7d-ed6f7d167451",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -397,7 +407,7 @@
                 },
                 {
                     "name": "",
-                    "id": "eb9e1fe5-0481-4dc8-9e6d-468dca676702",
+                    "id": "11403768-a5f6-4a50-aace-d1668fae0a9d",
                     "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
@@ -491,6 +501,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb9e1fe5-0481-4dc8-9e6d-468dca676702",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Touch",
+                    "action": "TouchJump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

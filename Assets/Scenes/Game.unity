@@ -714,14 +714,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 318549197}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ae9550da-71ad-4d6c-956d-8d17e1e566fb
     m_ActionName: 'Rock/Jump[/Keyboard/space,/Keyboard/w,/Keyboard/upArrow]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 318549200}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: Crouch
-        m_Mode: 0
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1296,7 +1308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &895639966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1795,11 +1807,11 @@ MonoBehaviour:
   coinSpawn: {fileID: 1748722692}
   player: {fileID: 318549200}
   scoreText: {fileID: 702606002}
-  gameAndName: {fileID: 0}
   playButton: {fileID: 247929680}
   quitButton: {fileID: 259530895}
   popupButton: {fileID: 895639965}
-  frameRate: -1
+  frameRate: 144
+  vSyncCount: 0
   edgePhaseX: 1.5
   yAxisPos4Spawn: -2.45
 --- !u!4 &2005618587

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
 	// Variables
 	public static GameManager instance;
 	AudioManager audioManager;
@@ -15,18 +14,17 @@ public class GameManager : MonoBehaviour
 	[SerializeField] GameObject quitButton;
 	[SerializeField] GameObject popupButton;
 	[SerializeField] int frameRate = -1;
+	[SerializeField] int vSyncCount = 0;
 	[SerializeField] float edgePhaseX = 1.5f;
 	[SerializeField] float yAxisPos4Spawn = -2.45f;
 	float score;
 	bool isGameRunning;
 
-
-
 	// Pre-built Functions
 	void Awake()
 	{
 		instance = this;
-		SetDefaultSettings(frameRate);
+		SetDefaultSettings(frameRate, vSyncCount);
 		audioManager = AudioManager.instance;
 		GameLoad();
 	}
@@ -36,37 +34,22 @@ public class GameManager : MonoBehaviour
 			ScoreIncrease(0.25f);
 	}
 
-
-
 	// Custom Functions
-	void SetDefaultSettings(int frameRate)
+	void SetDefaultSettings(int frameRate, int vSyncCount)
 	{
-		QualitySettings.vSyncCount = 0;
+		QualitySettings.vSyncCount = vSyncCount;
 		Application.targetFrameRate = frameRate;
 	}
-	void TeleportPlayer(Vector2 position)
-	{
-		player.transform.position = position;
-	}
-	public Vector2 FindLeftEdgeOfCamera(float edgePhaseX)
-	{
-		return new Vector2(Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + edgePhaseX, yAxisPos4Spawn);
-	}
-	public Vector2 FindRightEdgeOfCamera(float edgePhaseX)
-	{
-		return new Vector2(Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x + edgePhaseX, yAxisPos4Spawn);
-	}
+	void TeleportPlayer(Vector2 position) { player.transform.position = position; }
+	public Vector2 FindLeftEdgeOfCamera(float edgePhaseX) { return new Vector2(Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + edgePhaseX, yAxisPos4Spawn); }
+	public Vector2 FindRightEdgeOfCamera(float edgePhaseX) { return new Vector2(Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x + edgePhaseX, yAxisPos4Spawn); }
 	void GameLoad()
 	{
 		isGameRunning = false;
 		Time.timeScale = 0f;
 		score = scoreText.text == "" ? 0 : float.Parse(scoreText.text);
 	}
-	public void ClosePopup()
-	{
-		Destroy(popupButton);
-		// popupButton.SetActive(false);
-	}
+	public void ClosePopup() { Destroy(popupButton); }
 	public void GameStart()
 	{
 		Vector2 left = FindLeftEdgeOfCamera(edgePhaseX);
@@ -113,8 +96,5 @@ public class GameManager : MonoBehaviour
 			Destroy(coin.gameObject);
 		ResetScore();
 	}
-	public void ExitGame()
-	{
-		Application.Quit();
-	}
+	public void ExitGame() { Application.Quit(); }
 }
